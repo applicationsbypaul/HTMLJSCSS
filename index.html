@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Site</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <script src="javascript.js"></script>
 </head>
 
 <body>
@@ -17,34 +18,49 @@
                     <img src="./images/avatar.png" style="width: 50px; height: auto;" alt="">
                     <h3>Paul Ford</h3>
                     <p>Jr Developer</p>
-                </div>
-                <!--chart start-->
-                <div class="chart">
-                    <ul class="numbers">
-                        <li><span>10</span></li>
-                        <li><span>5</span></li>
-                        <li><span>0</span></li>
-                    </ul>
-                    <ul class="bars">
-                        <li>
-                            <div class="bar" data-percentage="119"></div><span>Building 01</span>
+
+
+                    <!--chart start-->
+                    <form onsubmit="returnData(); return false">
+                    <div class="chart">
+                        <ul class="numbers">
+                            <li><span>100</span></li>
+                            <li><span>50</span></li>
+                            <li><span>0</span></li>
+                        </ul>
+                        
+                        <ul class="bars">
                             
-                        </li>
-                        <li>
-                            <div class="bar" data-percentage="30"></div><span>Building 02</span>
-                        </li>
-                        <li>
-                            <div class="bar" data-percentage="60"></div><span>Building 03</span>
-                        </li>
-                        <li>
-                            <div class="bar" data-percentage="100"></div><span>Building 04</span>
-                        </li>
-                        <li>
-                            <div class="bar" data-percentage="80"></div><span>Buidling 05</span>
-                        </li>
-                    </ul>
+                                <li>
+                                    <div class="bar" id="A"></div><span>Building 01<input
+                                            type="text" size=4 maxlength="3" id="buildingA"></span>
+                                </li>
+                                <li>
+                                    <div class="bar" id= "B" data-percentage="10"></div><span>Building 02<input type="text"
+                                            size=4 maxlength="3" id="buildingB"></span>
+                                </li>
+                                <li>
+                                    <div class="bar" data-percentage="100"></div><span>Building 03<input type="text"
+                                            size=4 maxlength="3" id="buildingC"></span>
+                                </li>
+                                <li>
+                                    <div class="bar" data-percentage="50"></div><span>Building 04<input type="text"
+                                            size=4 maxlength="3" id="buildingD"></span>
+                                </li>
+                                <li>
+                                    <div class="bar" data-percentage="10"></div><span>Buidling 05<input type="text"
+                                            size=4 maxlength="3" id="buildingE"></span>
+                                </li>
+                                <br><br><br>
+                                <input type="submit" >
+                            </form>
+                            <script>
+                                //var data = returnData();
+                            </script>
+                        </ul>
+                    </div>
+                    <!--chart end-->
                 </div>
-                <!--chart end-->
                 <div class="links">
                     <div class="link">
                     </div>
@@ -55,14 +71,7 @@
     <div class="circle1"></div>
     <div class="circle2"></div>
 </body>
-<script type="text/javascript">
-    $(function () {
-        $('.bars li .bar').each(function (key, bar) {
-            var percentage = $(this).data('percentage');
-            $(this).animate({
-                'height': percentage + '%'
-            }, 1000);
-        });
-    });
-</script>
+<!-- <script>updateGraph();</script>-->
+
+
 </html>

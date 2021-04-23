@@ -6,10 +6,12 @@
 /*
 #65dfc9,#6cdbeb
 #0d072b,#996ceb
+    background: linear-gradient(to right top, #b30e60,#996ceb);
+
 */
 main{
     min-height: 100vh;
-    background: linear-gradient(to right top, #b30e60,#996ceb);
+    background: linear-gradient(to right top, #290453,#996ceb);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,7 +121,8 @@ main{
   
   .bars .bar{
     display: block;
-    background: #17C0EB;
+    /*background: #17C0EB;*/
+    background: #290453;
     width: 50px;
     position: absolute;
     bottom: 0;
